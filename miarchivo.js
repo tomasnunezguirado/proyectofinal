@@ -8,6 +8,13 @@ class Producto{
     }
 }
 
+class Ofertas{
+    constructor(titulo, precios){
+        this.titulo = titulo,
+        this.precios = precios
+    }
+}
+
 const producto1 = new Producto(1, "Arroz", 2023, 215, "arroz.jpg")
 const producto2 = new Producto(2, "Pollo", 2022, 315, "pollo.jpg")
 const producto3 = new Producto(3, "Fideos", 2023, 125, "fideos.jpg")
@@ -97,3 +104,21 @@ function agregarAlCarrito(producto){
     console.log(carrito)
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
+
+const oferta1 = new Ofertas("Oferta Por La Rafiki", "1200")
+const oferta2 = new Ofertas("Oferta Por La Donkey Kong", "1240")
+let Oferton = [oferta1, oferta2]
+
+
+function llamarOfertas(resultado){
+    return new Promise((res, rej)=>{
+        if(resultado){
+            res(Ofertones)
+        }else{
+            rej("No se pudo encontrar ofertas")
+        }
+    })
+}
+
+llamarOfertas()
